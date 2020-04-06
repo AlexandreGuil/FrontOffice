@@ -2,36 +2,42 @@
 <html>
 <head>
 	<title>Page de connexion</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+
 </head>
-<meta charset="utf-8" />
+
+
 <style type="text/css">
 	.connexion {
+		box-shadow: 5px 5px 5px grey;
 		border: solid 1px;
-		background: #A4F4CC;
+		background: lightgrey;
 		border-radius: 5px;
 		padding: 15px;
-		align-content: center;
-
+		margin:auto;
+		text-align:center;
+		width: 450px;
 	}
-	#titreId {
+	.tConnex {
 		text-align : center;
-		margin: auto;
-	}
+		text-shadow: 3px 3px 3px grey;
+	} 
+
 </style>
 <body>
-	<form>
-<h3 id="titreId"> Déjà Client? </h3>
-<table align="center" class="connexion"> <!--Formulaire de connexion-->
-	<tr> 
-		<td> Login : </td>
-		<td> <input type="" class="username" maxlength="20"</td>
-	<tr>
-	<tr>
-		<td> <br/> </td>
-	</tr>
-	<tr>
-		<td> Mot de passe : </td>
-		<td> <input type="password" class="password" maxlenght="20" </td>
-	</tr>
-</table>
+	<h3 class="tConnex"> Déjà Client? </h3>
+	<form class="connexion">
+  		<label>Login : </label>
+  			<input type="text" class="login" maxlength="16">
+  			<br/>
+		<label>Mot de passe : </label>
+    		<input type="password" class="password" maxlength="16">
+    		<br/>
+ 		<button type="submit" class="btn btn-success mb-2">Connexion</button>
+	</form>
+
  
