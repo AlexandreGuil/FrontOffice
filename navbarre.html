@@ -43,30 +43,32 @@
 
  
 		<!-- ajout du btn home -->
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand mr-right" href="#">
     <img src="C:\Users\IN-LL-056\Documents\Projet_E_Commerce\FrontOffice-Inti_JEE\src\img\home_button.png" width="50" height="30" alt="">
   </a>
 
 <!-- ajout d'une catégorie dropdown -->
 
-  <div class="dropdown">
+  <div class="dropdown mr-auto">
     <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Catégories
-    <span class="caret"></span>
     </button>
 
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+    <ul class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1">
       <li role="presentation">
-        <a role="menuitem" tabindex="-1" href="#">catégorie 1</a>
+        <label>
+      <input type="checkbox"> Catégorie 1
+        </label>
       </li>
       <li role="presentation">
-        <a role="menuitem" tabindex="-1" href="#">catégorie 2</a>
+         <label>
+      <input type="checkbox"> Catégorie 2
+        </label>
       </li>
       <li role="presentation">
-        <a role="menuitem" tabindex="-1" href="#">catégorie 3</a>
-      </li>
-      <li role="presentation" class="divider">
-      </li>
-          
+         <label>
+      <input type="checkbox"> Catégorie 3
+        </label>
+      </li>    
     </ul>
   </div><br>
 
@@ -74,11 +76,20 @@
 <!-- Ajout d'un text bienvenue -->
 <div class="navbar-text mr-auto">
       Bienvenue chez ~~  Adopte Ton E-Commerce  ~~
-    </div>
+</div>
+
+    <!-- ajout d'une barre de navigation  -->
+
+    <form class="form-inline my-2 my-lg-0 mr-left">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-info my-2 my-sm-0" type="submit" >Search
+      </button>
+
+    </form>
 
 
-<!-- ajout bouton connexion / inscription -->
-	<form class="form-inline mr-auto ">
+    <!-- ajout bouton connexion / inscription -->
+  <form class="form-inline mr-left ">
     <button class="btn btn-success" type="button" >Connexion
     </button>
     <button class="btn btn-success" type="button" >Inscription
@@ -86,14 +97,8 @@
   </form>
 
 
-    <!-- ajout d'une barre de navigation  -->
 
-    <form class="form-inline my-2 my-lg-0 mr-auto">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-info my-2 my-sm-0" type="submit" >Search
-      </button>
 
-    </form>
   </div>
 </nav>
 <script type="text/javascript" src="C:\Users\IN-LL-056\Documents\Projet_E_Commerce\FrontOffice-Inti_JEE\src\js\navbarre.js"></script>
