@@ -6,9 +6,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- 	Bootstrap CSS -->
+	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  
+ 
+<!-- 
+<link rel="stylesheet" type="text/css" href="index.css"> -->
+
+
+
   </head>
   
 <header>
@@ -22,47 +31,29 @@
 
 
 
-
-<ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
 <!-- ajout d'une catégorie dropdown -->
 
- 
-<div class="dropdown">
-  <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Catégories
-  </a>
-
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox">Catégorie 1
-        </label>
-      </div>
-    </li>
-  
-    <li>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox">Catégorie 2
-        </label>
-      </div>
-    </li>
-
-    <li>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox">Catégorie 3
-        </label>
-      </div>
-    </li>
-  </ul>
-</div>
-
- </li>
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">catégorie 1</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">catégorie 2</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">catégorie</a></li>
+      <li role="presentation" class="divider"></li>
+          
     </ul>
+  </div><br>
 
+<!-- ajout du js -->
+<script>
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown();
+});
+</script>
+
+
+<!-- Ajout d'un text bienvenue -->
 <div class="navbar-text mr-auto">
       Bienvenue chez ~~  Adopte Ton E-Commerce  ~~
     </div>
@@ -90,7 +81,6 @@
 
 
   <body>
-
 
   </body>
 </html>
