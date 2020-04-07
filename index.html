@@ -26,8 +26,137 @@
 		text-align : center;
 		text-shadow: 3px 3px 3px grey;
 	} 
+	 		form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  width: 600px;
+  
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
 
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 110px;
+  text-align: right;
+}
+
+input, textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 400px;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.inscri tr{
+	padding-bottom: 100px;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px; /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: .5em;
+}
 </style>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<!-- 	Bootstrap CSS -->
+	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+ 
+<!-- 
+<link rel="stylesheet" type="text/css" href="index.css"> -->
+
+  </head>
+  
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A4F4CC;">
+
+ 
+		<!-- ajout du btn home -->
+  <a class="navbar-brand" href="#">
+    <img src="home_button.png" width="50" height="30" alt="">
+  </a>
+
+<!-- ajout d'une catégorie dropdown -->
+
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Catégorie
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">catégorie 1</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">catégorie 2</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">catégorie 3</a></li>
+      <li role="presentation" class="divider"></li>
+          
+    </ul>
+  </div><br>
+
+<!-- ajout du js -->
+<script>
+  $(document).ready(function(){
+    $(".dropdown-toggle").dropdown();
+  });
+</script>
+
+<!-- Ajout d'un text bienvenue -->
+<div class="navbar-text mr-auto">
+      Bienvenue chez ~~  Adopte Ton E-Commerce  ~~
+    </div>
+
+
+<!-- ajout bouton connexion / inscription -->
+	<form class="form-inline mr-auto ">
+    <button class="btn btn-outline-success" type="button"  style="background-color: #32CD32; color: #040404" >Connexion
+    </button>
+    <button class="btn btn-outline-success" type="button" style="background-color: #32CD32; color:#040404" >Inscription
+    </button>
+  </form>
+
+
+    <!-- ajout d'une barre de navigation  -->
+
+    <form class="form-inline my-2 my-lg-0 mr-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: #1CACF4; color:#FFFFFF" >Search
+      </button>
+
+    </form>
+  </div>
+</nav>
+
+</header>
+
 <body>
 	<h3 class="tConnex"> Déjà Client? </h3>
 	<form class="connexion">
@@ -40,4 +169,31 @@
  		<button type="submit" class="btn btn-success mb-2">Connexion</button>
 	</form>
 
- 
+  
+<form>
+	<label>Formulaire d'inscription :</label>
+  <div class="form-group">
+   Pseudonyme <input type="email" class="form-control" id="Nickname" placeholder="Votre nom">
+  </div>
+  <div class="form-group">
+   Nom de compte
+    <input type="text" class="form-control" id="Account" placeholder="Nom de compte">
+  </div>
+    <div class="form-group">
+    Mot de passe
+    <input type="password" class="form-control" id="Password" placeholder="Mot de passe">
+  </div>
+    <div class="form-group">
+    Adresse
+    <input type="text" class="form-control" id="Adress" placeholder="Adresse">
+  </div>
+    <div class="form-group">
+   Telephone
+    <input type="text" class="form-control" id="Phone" placeholder="N° de Telephone">
+  </div>
+
+  <button type="submit" class="btn btn-success" font-color:"#32cd32">S'inscrire</button>
+</form>
+
+  </body>
+</html>
