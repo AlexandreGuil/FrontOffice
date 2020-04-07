@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page de connexion</title>
-	<meta charset="utf-8" />
-    <link rel="stylesheet" href ="src\css\style_page_authentification.css"/>
-	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Page de connexion</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
 
+<style type="text/css">
+  .formulaire {
+        box-shadow: 5px 5px 5px grey;
+        border: solid 1px;
+        background: lightgrey;
+        border-radius: 5px;
+        padding: 15px;
+        margin:auto;
+        text-align:center;
+        width: 450px;
+    }
+</style>
 </head>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-<!-- 	Bootstrap CSS -->
-	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--  Bootstrap CSS -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,10 +38,10 @@
   </head>
   
 <header>
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A4F4CC;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A4F4CC;">
 
  
-		<!-- ajout du btn home -->
+    <!-- ajout du btn home -->
   <a class="navbar-brand" href="#">
     <img src="home_button.png" width="50" height="30" alt="">
   </a>
@@ -65,7 +74,7 @@
 
 
 <!-- ajout bouton connexion / inscription -->
-	<form class="form-inline mr-auto ">
+  <form class="form-inline mr-auto ">
     <button class="btn btn-outline-success" type="button"  style="background-color: #32CD32; color: #040404" >Connexion
     </button>
     <button class="btn btn-outline-success" type="button" style="background-color: #32CD32; color:#040404" >Inscription
@@ -85,43 +94,61 @@
 </nav>
 
 </header>
-
+<!-- LE BODY EST ICI ------------------------------------------------------------------------------------------------------------------------------------------------------------>
 <body>
-	<h3 class="tConnex"> Déjà Client? </h3>
-	<form class="connexion">
-  		<label>Pseudo : </label>
-  			<input type="text" class="login" maxlength="16">
-  			<br/>
-		<label>Mot de passe : </label>
-    		<input type="password" class="password" maxlength="16">
-    		<br/>
- 		<button type="submit" class="btn btn-success mb-2">Connexion</button>
-	</form>
+  <!-- 
+  <h3 class="tConnex"> Déjà Client? </h3>
+  <form class="connexion">
+      <label>Pseudo : </label>
+        <input type="text" class="login" maxlength="16">
+        <br/>
+    <label>Mot de passe : </label>
+        <input type="password" class="password" maxlength="16">
+        <br/>
+    <button type="submit" class="btn btn-success mb-2">Connexion</button>
+  </form>
+  -->
+<form class="formulaire">
+  <caption><center><b> Déjà client ? </b></center></caption>
+  <div class="form-group">
+    Nom de compte 
+    <input type="text" class="form-control"  placeholder="Nom de compte" />
+  </div>
+  <div class="form-group">
+    Mot de passe <br> 
+    <input type="password" class="form-control"  placeholder="Mot de passe" />
+  </div>
+  <div align="right" > <a href="">Mot de passe oublié ?</a> | <button type="submit" class="btn btn-success">Se connecter </button>
+  </div>
+</form>
+<br/>
+<br/> 
 
   
-<form>
-	<label>Formulaire d'inscription :</label>
+<form name="inscription" class="formulaire">
+  <caption><center><b>Formulaire d'inscription :</b></center></caption>
   <div class="form-group">
-   Pseudonyme <input type="email" class="form-control" id="Nickname" placeholder="Votre nom">
+   Pseudonyme <input type="email" class="form-control"  placeholder="Votre nom"/>
   </div>
   <div class="form-group">
    Nom de compte
-    <input type="text" class="form-control" id="Account" placeholder="Nom de compte">
+    <input type="text" class="form-control"  placeholder="Nom de compte">
   </div>
     <div class="form-group">
     Mot de passe
-    <input type="password" class="form-control" id="Password" placeholder="Mot de passe">
+    <input type="password" class="form-control"  placeholder="Mot de passe">
   </div>
     <div class="form-group">
     Adresse
-    <input type="text" class="form-control" id="Adress" placeholder="Adresse">
+    <input type="text" class="form-control" placeholder="Adresse">
   </div>
     <div class="form-group">
    Telephone
-    <input type="text" class="form-control" id="Phone" placeholder="N° de Telephone">
+    <input type="text" class="form-control"  placeholder="N° de Telephone">
   </div>
-
-  <button type="submit" class="btn btn-success" font-color:"#32cd32">S'inscrire</button>
+  <div align="right">
+  <button type="submit" class="btn btn-success"/>S'inscrire</button>
+</div>
 </form>
 
   </body>
