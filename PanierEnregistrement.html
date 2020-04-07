@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+
+</head>
+<style type="text/css">
+
+  body {
+    padding: 0px 30px 30px 20px;
+    font-family: $font-default;
+    font-weight: 100;
+  }
+
+  h1 {
+    font-weight: 100;
+    text-align: center;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  input {
+    width: 40px;
+  }
+
+  button {
+    margin: 10px;
+  }
+
+  .col-contenu label {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    color : grey;
+
+  }
+
+  .contenu {
+  margin-top: 15px;
+  }
+
+  .produit {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .image-prd {
+    text-align: center;
+  }
+
+  .titre-prd {
+    margin-right: 20px;
+    font-family: bold;
+    font-size: 20px;
+  }
+  .description-prd {
+    margin: 5px 20px 5px 0;
+    line-height: 1.4em;
+  }
+  .supprime-prd {
+    border: 0;
+    padding: 4px 8px;
+    font-family: bold;
+  }
+  .tot-gauche {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .tot-droite {
+    float: right;
+    width: 21%;
+    text-align: right;
+  }
+
+  #tot {
+    float: left;
+    clear: both;
+    width: 79%;
+    text-align: right;
+    }
+  
+  #final {
+    color : blue;
+    font-size: 18px;
+  }
+
+  .action {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #6b6;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+}
+
+  .en-tete {
+    text-align: center;
+  }
+
+  tableau {
+    border: solid 1px black;
+  }
+}
+
+</style>
+<body>
+
+<h1>Votre Panier</h1>
+
+<div class="contenu">
+  <table>
+  <th class="col-contenu">
+    <thead><label class="en-tete">Image</label></thead>
+    <thead><label class="en-tete">Produit</label></thead>
+    <thead><label class="en-tete">Prix</label></thead>
+    <thead><label class="en-tete">Quantité</label></thead>
+    <thead><label class="en-tete">Supprimer</label></thead>
+    <thead><label class="en-tete">Total</label></thead>
+  </th>
+
+  <tr class="produit">
+    <td class="image-prd"><img src="https://s.cdpn.io/3/dingo-dog-bones.jpg"></td>
+    <td><div class="details-prd">
+      <div class="titre-prd">Produit 1</div>
+      <p class="description-prd">Description Produit 1</p>
+    </div></td>
+    <td><div class="prix-prd">8€</div>
+    <div class="quantite-prd">
+      <input type="number" value="1" min="1" max)="10">
+    </div><td>
+    <td><div class="suprime-prd">
+      <button type="submit" class="btn btn-danger mb-2">Supprimer</button>
+    </div></td>
+    <td class="total-prix">8€</td>
+  </tr>
+</table>
+
+    <div class="produit">
+    <div class="image-prd">
+      <img src="">
+    </div>
+    <div class="details-prd">
+      <div class="titre-prd">Produit 2</div>
+      <p class="description-prd">Description Produit 2</p>
+    </div>
+    <div class="prix-prd">14€</div>
+    <div class="quantite-prd">
+      <input type="number" value="2" min="1" max)="10">
+    </div>
+    <div class="suprime-prd">
+      <button type="submit" class="btn btn-danger mb-2">Supprimer</button>
+    </div>
+    <div class="total-prix">28€</div>
+  </div>
+
+  <div class="totaux">
+    <div class="tot-gauche">
+      <label id="tot">Sub-total</label>
+      <div class="tot-droite" >42€</div>
+    </div>
+    <div class="tot-gauche">
+      <label id="tot"> Taxe (5%)</label>
+      <div class="tot-droite">2,10€</div>
+    </div>
+    <div class="tot-gauche">
+      <label id="tot"> Livraison </label>
+      <div class="tot-droite">0,00€</div>
+    </div>
+    <div class="tot-gauche">
+      <label id="tot"> Total Final </label>
+      <div class="tot-droite" id="final">44.10€</div>
+    </div>
+  </div>
+      <button class="action">Payer</button>
+      <button class="action"> Enregistrer le panier</button>
+     
+</div>
+
+</body>
+</html>

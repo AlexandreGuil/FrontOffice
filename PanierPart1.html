@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Panier</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+  	<style type="text/css">
+  		td {
+  			width: 180px;
+  		}
+  		.compte {
+  			font-size: 26px;
+  		}
+  	</style>
+</head>
+<body>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Votre Panier</h1>
+     </div>
+</section>
+
+<div class="conteneur mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="div-tableau">
+                <table align="center" class="tableau">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col" class="text-center">Produit</th>
+                            <th scope="col" class="text-center">Description</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-center">Prix</th>
+                            <th scope="col" class="text-center">Total</th>
+                            <th scope="col" class="text-center"> Suppression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff"/> </td>
+                            <td class="text-center">Nom Produit 1</td>
+                            <td class="text-center">Description Produit 1</td>
+                            <td class="text-center"><input  type="text" class="quant" value="1" min="1"/></td>
+                            <td class="text-center">124.90 €</td>
+                            <td class="text-center">124,90 €</td>
+                            <td class="text-center"><button class="btn btn-sm btn-danger">Supprimer<i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff"/> </td>
+                            <td class="text-center">Nom Produit 2</td>
+                            <td class="text-center">Description Produit 2</td>
+                            <td class="text-center"><input  type="text" class="quant" value="1" min="1"/></td>
+                            <td class="text-center">33.90 €</td>
+                            <td class="text-center">33,90 €</td>
+                            <td class="text-center"><button class="btn btn-sm btn-danger">Supprimer<i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff"/> </td>
+                            <td class="text-center">Nom Produit 2</td>
+                            <td class="text-center">Description Produit 2</td>
+                            <td class="text-center"><input  type="text" class="quant" value="1" min="1"/></td>
+                            <td class="text-center">80.00 €</td>
+                            <td class="text-center">80.00 €</td>
+                            <td class="text-center"><button class="btn btn-sm btn-danger">Supprimer<i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                    <div class="compte">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sous-total</td>
+                            <td class="text-right">238.80 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Frais de Livraison</td>
+                            <td class="text-right">7,90 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>246,70 €</strong></td>
+                        </tr>
+                     </div>
+                    </tbody>
+                </table>
+                <br/>
+            </div>
+        </div>
+        <div class="col mb-3" 
+            <div class="row">
+                <div class="col-sm-12  col-md-4">
+                    <button class="btn btn-block btn-light">Continuer ses achats</button>
+                </div>
+                <div class="col-sm-12  col-md-4">
+                    <button class="btn btn-block btn-info text-uppercase">Enregistrer le panier</button>
+                </div>
+                <div class="col-sm-12 col-md-4 text-right">
+                    <button class="btn btn-block btn-success text-uppercase">Payer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
