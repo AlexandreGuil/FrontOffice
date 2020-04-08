@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FrontOffice"
+    }
+  },
+  "defaultProject": "FrontOffice",
+  "cli": {
+    "analytics": false
+  }
 }
