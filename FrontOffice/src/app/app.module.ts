@@ -7,6 +7,7 @@ import { NavBarreComponent } from './nav-barre/nav-barre.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { ModifCategorieComponent } from './modif-categorie/modif-categorie.component';
+import { PanierFinalComponent } from './panier-final/panier-final.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ModifCategorieComponent } from './modif-categorie/modif-categorie.compo
     NavBarreComponent,
     NavigationComponent,
     AuthentificationComponent,
-    ModifCategorieComponent
+    ModifCategorieComponent,
+    PanierFinalComponent
   ],
   imports: [
     BrowserModule,
