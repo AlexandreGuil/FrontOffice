@@ -74,5 +74,98 @@
             </table>
         </div>
     </div>  
-</body>
-</html>                                              
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Votre Panier</h1>
+     </div>
+</section>
+
+<div class="conteneur mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="div-tableau">
+                <table class="tableau">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col" class="text-center">Produit</th>
+                            <th scope="col" class="text-center">Description</th>
+                            <th scope="col" class="text-center">Quantité</th>
+                            <th scope="col" class="text-center">Prix</th>
+                            <th scope="col" class="text-center">Total</th>
+                            <th scope="col" class="text-center">Suppression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff"/> </td>
+                            <td class="text-center">Nom Produit 1</td>
+                            <td class="text-center">Description Produit 1</td>
+                            <td class="text-center"><input  type="text" class="quant" value="1" min="1"/></td>
+                            <td class="text-center">124.90 €</td>
+                            <td class="text-center">124,90 €</td>
+                            <td class="text-center"><button class="btn btn-sm btn-danger" id = "hover" onclick= "supprimer()">Supprimer<i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff"/> </td>
+                            <td class="text-center">Nom Produit 2</td>
+                            <td class="text-center">Description Produit 2</td>
+                            <td class="text-center"><input  type="text" class="quant" value="1" min="1"/></td>
+                            <td class="text-center">33.90 €</td>
+                            <td class="text-center">33,90 €</td>
+                            <td class="text-center"><button class="btn btn-sm btn-danger" id = "hover" onclick= "supprimer()">Supprimer<i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff"/> </td>
+                            <td class="text-center">Nom Produit 2</td>
+                            <td class="text-center">Description Produit 2</td>
+                            <td class="text-center"><input  type="text" class="quant" value="1" min="1"/></td>
+                            <td class="text-center">80.00 €</td>
+                            <td class="text-center">80.00 €</td>
+                            <td class="text-center"><button class="btn btn-sm btn-danger" id = "hover" onclick= "supprimer()">Supprimer<i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sous-total</td>
+                            <td class="text-right">238.80 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Frais de Livraison</td>
+                            <td class="text-right">7,90 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>246,70 €</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+            </div>
+        </div>
+        <div class="col mb-3" >
+            <div class="row">
+                <div class="col-sm-12  col-md-4">
+                    <button class="btn btn-block btn-light" onclick="continuer()">Continuer ses achats</button>
+                </div>
+                <div class="col-sm-12  col-md-4">
+                    <button class="btn btn-block btn-info text-uppercase" onclick= "enregistrer()">Enregistrer le panier</button>
+                </div>
+                <div class="col-sm-12 col-md-4 text-right">
+                    <button class="btn btn-block btn-success text-uppercase" onclick= "payer()">Payer</button>
+                </div>
+            </div>
+        </div>
+    
+</div>
