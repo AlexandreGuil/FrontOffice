@@ -12,7 +12,6 @@ import { PanierFinalComponent } from './panier-final/panier-final.component';
 
 const routes: Routes = [
 {path : 'authentification', component: AuthentificationComponent},
-
 {path : 'panier', component: PanierFinalComponent},
 {path : 'catégorie', component: ModifCategorieComponent},
 {path : 'navigation',  component: NavigationComponent, children:[
