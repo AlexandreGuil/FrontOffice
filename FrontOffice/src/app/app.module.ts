@@ -9,6 +9,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { ModifCategorieComponent } from './modif-categorie/modif-categorie.component';
 import { PanierFinalComponent } from './panier-final/panier-final.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -19,7 +22,7 @@ import { PanierFinalComponent } from './panier-final/panier-final.component';
     AuthentificationComponent,
     ModifCategorieComponent,
     PanierFinalComponent,
-    
+  
     
    
     
@@ -27,6 +30,8 @@ import { PanierFinalComponent } from './panier-final/panier-final.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+      ReactiveFormsModule,
+    HttpClientModule
    
      
     
