@@ -11,17 +11,17 @@ import { PanierFinalComponent } from './panier-final/panier-final.component';
 
 
 const routes: Routes = [
-{path : 'authentification', component: AuthentificationComponent},
-
-{path : 'panier', component: PanierFinalComponent},
-{path : 'navigation',  component: NavigationComponent, children:[
-  { path :'panier', component: PanierFinalComponent}
-
-]
-
-}
-
-];
+  {path : 'authentification', component: AuthentificationComponent},
+  
+  {path : 'panier', component: PanierFinalComponent},
+  {path : 'navigation',  component: NavigationComponent, children:[
+    { path :'panier', component: PanierFinalComponent}
+  
+  ]
+  
+  }
+  
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
