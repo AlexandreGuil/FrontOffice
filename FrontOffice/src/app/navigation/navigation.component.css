@@ -1,0 +1,49 @@
+body {
+    color: #404E67;
+    background: #F5F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+table {
+    text-align: center;
+}
+
+.table-entiere {
+    width: 800px;
+    margin: 30px auto;
+    background: #ccc;
+    padding: 20px;  
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 5px;
+}
+
+table.table {
+    table-layout: fixed;
+
+}
+
+.tableau {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+td {
+    padding : 15px;
+}
+
+input {
+    width : 50px;
+    margin : auto;
+    text-align: center;
+}
+
+.show-cart li {
+    display: flex;
+  }
+  .panier {
+    margin-bottom: 20px;
+  }
+  .panier-img-top {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+  }

@@ -14,6 +14,9 @@ const routes: Routes = [
   {path : 'authentification', component: AuthentificationComponent},
   
   {path : 'panier', component: PanierFinalComponent},
+
+  {path : 'categories', component : ModifCategorieComponent},
+  
   {path : 'navigation',  component: NavigationComponent, children:[
     { path :'panier', component: PanierFinalComponent}
   

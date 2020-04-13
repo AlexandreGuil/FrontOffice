@@ -14,15 +14,15 @@
                 <div class="row">
                     <div class="col-sm-6"><h2>Liste des <b>Catégories</b></h2></div>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Ajouter une Catégorie</button>
+                        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Ajouter une Catégorie</button>
                     </div>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-info"><i class="fa fa-pencil"></i> Modifier les produits</button>
+                        <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Modifier les produits</button>
                     </div>
                 </div>
             </div>
             <table class="table table-bordered">
-                <thead>
+                <thead id="planning">
                     <tr>
                         <th>Num.</th>
                         <th>Photo</th>
@@ -38,9 +38,9 @@
                         <td>Catégorie 1</td>
                         <td>Description Courte</td>
                         <td>
-                            <a class="add" title="Ajouter" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Modifier" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Supprimer" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <button type="button" class="btn btn-outline-info"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                            <button type="button" class="btn btn-outline-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                            <button type="button" class="btn btn-outline-danger"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
                         </td>
                     </tr>
                       <tr>
@@ -49,9 +49,9 @@
                         <td>Catégorie 2</td>
                         <td>Description un peu plus longue mais pas trop</td>
                         <td>
-                            <a class="add" title="Ajouter" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Modifier" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Supprimer" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <button type="button" class="btn btn-outline-info"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                            <button type="button" class="btn btn-outline-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                            <button type="button" class="btn btn-outline-danger"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
                         </td>
                     </tr>
                        <tr>
@@ -60,9 +60,9 @@
                         <td>Catégorie 3</td>
                         <td>Une description vraiment très longue car sinon on ne peut pas voir la limite que peut présenter la case, bon je vais m'arrêter là car c'est un peu long d'écrire</td>
                         <td>
-                            <a class="add" title="Ajouter" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Modifier" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Supprimer" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <button type="button" class="btn btn-outline-info"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                            <button type="button" class="btn btn-outline-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                            <button type="button" class="btn btn-outline-danger" onclick="supprimerLigne()"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
                         </td>
                     </tr>
                 </tbody>
