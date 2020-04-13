@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +9,6 @@ import { AuthentificationComponent } from './authentification/authentification.c
 import { ModifCategorieComponent } from './modif-categorie/modif-categorie.component';
 import { PanierFinalComponent } from './panier-final/panier-final.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,18 +16,11 @@ import { PanierFinalComponent } from './panier-final/panier-final.component';
     NavigationComponent,
     AuthentificationComponent,
     ModifCategorieComponent,
-    PanierFinalComponent,
-    
-    
-   
-    
+    PanierFinalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-   
-     
-    
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
