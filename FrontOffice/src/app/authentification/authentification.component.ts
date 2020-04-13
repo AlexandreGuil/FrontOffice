@@ -12,8 +12,8 @@ export class AuthentificationComponent implements OnInit {
   form: FormGroup ;
   clients: any []=[]
   index: any;
-client: any;
-id: any;
+  client: any;
+  id: any;
 
 
   constructor() { }
@@ -30,7 +30,9 @@ id: any;
      
       
      
-     
+  forgetPassword () { // Message pour les personnes tappant sur Mot de passe oublié
+    alert("Tant pis pour toi!!!!");
+  }   
   
 
   addClientt(){
