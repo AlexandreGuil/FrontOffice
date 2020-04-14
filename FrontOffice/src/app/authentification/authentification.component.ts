@@ -10,20 +10,12 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 
 export class AuthentificationComponent implements OnInit {
-  form: FormGroup ;
-  clients: any []=[]
-  index: any;
-  client: any;
-  id: any;
-
+ 
 
   constructor() { }
 
   ngOnInit(): void {
-   this.form = new FormGroup ({
-    nomcompte : new FormControl (null, Validators.required)
-   });
-
+  
    
         }
      
@@ -33,11 +25,7 @@ export class AuthentificationComponent implements OnInit {
     alert("Tant pis pour toi!!!!");
   }   
   
-addClient(){
-  this.clients.push(this.form.value);
-  console.log (this.clients);
 
-}
 
 
   
