@@ -1,14 +1,14 @@
-<form class="formulaireconexion" >
+<form name="connexion" class="formulaireconnexion" [formGroup]="form">
   <h3><b> Déjà client ? </b></h3>
   <div class="form-group">
     Nom de compte 
-    <input type="text" class="form-control"  placeholder="Nom de compte" />
+    <input type="text" class="form-control" placeholder="Nom de compte" formControlName="compte"/>
   </div>
   <div class="form-group">
     Mot de passe <br> 
-    <input type="password" class="form-control"  placeholder="Mot de passe" />
+    <input type="password" class="form-control" placeholder="Mot de passe" formControlName="password"/>
   </div>
-  <div > <a href="" (click)="forgetPassword()">Mot de passe oublié ?</a> | <button type="submit" class="btn btn-success">Se connecter </button>
+  <div> <a href="" (click)="forgetPassword()">Mot de passe oublié ?</a> | <button type="submit" class="btn btn-success" (click)="verifClient()" >Se connecter</button>
   </div>
 </form>
 <br/>

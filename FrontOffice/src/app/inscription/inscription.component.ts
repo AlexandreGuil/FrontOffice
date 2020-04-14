@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-inscription',
@@ -17,7 +18,11 @@ export class InscriptionComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup ({
-      nomcompte : new FormControl (null, Validators.required)
+      name : new FormControl (null, Validators.required),
+      nomcompte : new FormControl (null, Validators.required),
+      motdepasse : new FormControl (null, Validators.required),
+      adresse : new FormControl (null, Validators.required),
+      telephone : new FormControl (null, Validators.required)
      });
   
   }

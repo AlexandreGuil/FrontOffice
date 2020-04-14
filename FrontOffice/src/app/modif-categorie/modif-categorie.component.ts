@@ -14,21 +14,8 @@ export class ModifCategorieComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
-        $(document).ready(function() {
-        $(".add").click(function() {
-            var nom = $("#nom").val();
-            var email = $("#email").val();
-            var ligne = "<tr><td><input type='checkbox' name='select'></td><td>" + nom + "</td><td>" + email + "</td></tr>";
-            $("table.test").append(ligne);
-        });
-        $(".delete").click(function() {
-            $("table.test").find('input[name="select"]').each(function() {
-                if ($(this).is(":checked")) {
-                    $(this).parents("table.test tr").remove();
-                }
-            });
-        });
+    $(window).click(function () {
+      alert('JQuery est installé');
     });
   
   $(document).ready(function(){
@@ -85,7 +72,6 @@ export class ModifCategorieComponent implements OnInit {
       $(".add-new").removeAttr("disabled");
       });
   });
-  
 }
 }
 

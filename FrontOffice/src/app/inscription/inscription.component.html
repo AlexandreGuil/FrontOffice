@@ -2,25 +2,25 @@
   <form  name="inscription" class="formulaireinscription" [formGroup]="form">
     <h2><b>Inscrivez-vous!</b></h2>
     <div class="form-group" >
-     Pseudonyme <input type="email" class="form-control"  placeholder="Votre nom" >
+     Pseudonyme <input type="email" class="form-control"  placeholder="Email" formControlName="name">
     </div>
     <div class="form-group">
      Nom de compte
-      <input type="text" class="form-control"  placeholder="Nom de compte" formControlName="nomcompte" >
+      <input type="text" class="form-control" placeholder="Nom de compte" formControlName="nomcompte" >
     </div>
       <div class="form-group">
       Mot de passe
-      <input type="password" class="form-control"  placeholder="Mot de passe" >
+      <input type="password" class="form-control" placeholder="Mot de passe" formControlName="motdepasse">
     </div>
       <div class="form-group">
       Adresse
-      <input type="text" class="form-control" placeholder="Adresse" >
+      <input type="text" class="form-control" placeholder="Adresse" formControlName="adresse">
     </div>
       <div class="form-group">
      Telephone
-      <input type="text" class="form-control"  placeholder="N° de Telephone" >
+      <input type="text" class="form-control"  placeholder="N° de Telephone" formControlName="telephone">
     </div>
     <div>
-    <input type="submit" class="btn btn-success" value="s'inscrire" (click)="addClient()" >
+    <input type="submit" class="btn btn-success" value="S'inscrire" (click)="addClient()" >
   </div>
   </form>

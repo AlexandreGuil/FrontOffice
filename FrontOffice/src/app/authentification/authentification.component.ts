@@ -10,26 +10,27 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 
 export class AuthentificationComponent implements OnInit {
- 
+  form: FormGroup;
+
 
   constructor() { }
 
   ngOnInit(): void {
-  
-   
-        }
-     
-      
-     
+    this.form = new FormGroup ({
+      compte : new FormControl (null, Validators.required),
+      password : new FormControl (null, Validators.required),
+    });
+  } 
+       
   forgetPassword () { // Message pour les personnes tappant sur Mot de passe oublié
     alert("Tant pis pour toi!!!!");
   }   
-  
 
-
-
-  
+  verifClient (){
+    
   }
+  
+}
 
 
 
