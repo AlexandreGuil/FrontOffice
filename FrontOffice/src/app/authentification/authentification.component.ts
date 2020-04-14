@@ -8,6 +8,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   templateUrl: './authentification.component.html',
   styleUrls: ['./authentification.component.css']
 })
+
 export class AuthentificationComponent implements OnInit {
   form: FormGroup ;
   clients: any []=[]
@@ -19,11 +20,9 @@ export class AuthentificationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-     
-      nomcompte : new FormControl (null, [Validators.required, Validators.minLength(5), Validators.maxLength(20)]),
-      
-    })// fin FormGroup
+   this.form = new FormGroup ({
+    nomcompte : new FormControl (null, Validators.required)
+   });
 
    
         }
@@ -34,12 +33,12 @@ export class AuthentificationComponent implements OnInit {
     alert("Tant pis pour toi!!!!");
   }   
   
+addClient(){
+  this.clients.push(this.form.value);
+  console.log (this.clients);
 
-  addClientt(){
-      this.clients.push(this.form.value);  //récup les valeur saisi par user au travers de l'objet form qui stock les éléème de formgroup
-    console.log(this.clients);
-    
-    }
+}
+
 
   
   }

@@ -1,4 +1,4 @@
-<form class="formulaire">
+<!-- <form class="formulaire" >
     <h3><b> Déjà client ? </b></h3>
     <div class="form-group">
       Nom de compte 
@@ -13,12 +13,12 @@
   </form>
   <br/>
   <br/> 
-  
+   -->
     
-  <form  name="inscription" class="formulaire">
+  <form  name="inscription" class="formulaire" [formGroup]="form">
     <h2><b>Inscrivez-vous!</b></h2>
     <div class="form-group" >
-     Pseudonyme <input type="email" class="form-control"  placeholder="Votre nom"/>
+     Pseudonyme <input type="email" class="form-control"  placeholder="Votre nom" >
     </div>
     <div class="form-group">
      Nom de compte
@@ -26,17 +26,17 @@
     </div>
       <div class="form-group">
       Mot de passe
-      <input type="password" class="form-control"  placeholder="Mot de passe">
+      <input type="password" class="form-control"  placeholder="Mot de passe" >
     </div>
       <div class="form-group">
       Adresse
-      <input type="text" class="form-control" placeholder="Adresse">
+      <input type="text" class="form-control" placeholder="Adresse" >
     </div>
       <div class="form-group">
      Telephone
-      <input type="text" class="form-control"  placeholder="N° de Telephone">
+      <input type="text" class="form-control"  placeholder="N° de Telephone" >
     </div>
     <div>
-    <button type="submit" class="btn btn-success">S'inscrire</button>
+    <input type="submit" class="btn btn-success" value="s'inscrire" (click)="addClient()" >
   </div>
   </form>
