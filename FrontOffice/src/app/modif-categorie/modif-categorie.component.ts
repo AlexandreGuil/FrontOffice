@@ -14,9 +14,6 @@ export class ModifCategorieComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $(window).click(function () {
-      alert('JQuery est installé');
-    });
   
   $(document).ready(function(){
     (<any>$('[data-toggle="tooltip"]')).tooltip();
