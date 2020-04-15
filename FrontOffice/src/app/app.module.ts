@@ -1,3 +1,4 @@
+import { ClientService } from 'src/service/client.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -34,7 +35,8 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule
     
   ],
-  providers: [InscriptionService],
+  providers: [InscriptionService,
+  ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
