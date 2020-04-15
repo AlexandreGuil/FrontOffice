@@ -30,8 +30,8 @@
                                 <th scope="col" class="text-center">Description</th>
                                 <th scope="col" class="text-center">Quantité</th>
                                 <th scope="col" class="text-center">Prix</th>
-                                <th scope="col" class="text-center">Total</th>
-                                <th scope="col" class="text-center">Suppression</th>
+                                <!-- <th scope="col" class="text-center">Total</th>
+                                <th scope="col" class="text-center">Suppression</th> -->
                             </tr>
                         </thead>
 
@@ -39,7 +39,11 @@
 
                         <tr **ngFor="let p of produitList; let i=index">
 
-                            <!-- <td class="text-center">{{}}</td> -->
+                            <td class="text-center">{{p.designation}}</td>
+                            <td class="text-center">{{p.description}}</td>
+                            <td class="text-center">{{p.quantite}}</td>
+                            <td class="text-center">{{p.prix}}</td>
+
 
                         </tr>
 

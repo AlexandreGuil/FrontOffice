@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ClientService } from 'src/service/client.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -30,6 +31,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule
     
   ],

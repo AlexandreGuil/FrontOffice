@@ -9,26 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanierFinalComponent implements OnInit {
 
-  lsitCategorie: any[] = [];
-  lsitProduit: any[] = [];
-
   constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit(): void {
-    this.findAllCategorie();
-
-  }
-
-  findAllCategorie() {
-    this.clientService.findAllCategorie().subscribe((value: any[]) => 
-    this.lsitCategorie = value
-    );
-  }
-
-  findAllProduit() {
-    this.clientService.findAllProduit().subscribe((value: any[]) =>
-    this.lsitProduit = value
-    );
+    
   }
 
  supprimer(){
@@ -48,7 +32,5 @@ enregistrer(){
 payer(){
   alert("Merci de votre visite");
 }
-
-
 
 }

@@ -1,3 +1,4 @@
+import { Produit } from './../model/produit';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
@@ -5,39 +6,40 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class ClientService {
-    categorie: any[] = [];
-    produit: any[] = [];
+    // categorie: any[] = [];
+    produit: Produit[] = [];
     editMode: Boolean = false;
     URL = 'http://localhost:8080/apiClient/';
 
-    constructor(private httpClient: HttpClient){};
+    constructor(private httpClient: HttpClient){ console.log("construct client service");};
 
 
-    findAllCategorie() {
-        return this.httpClient.get<any[]>(this.URL + 'findAllCategorie').pipe(map(value => this.categorie = value));
+    // findAllCategorie(): Observable<Produit[]> {
+    //     return this.httpClient.get<Produit[]>(this.URL + 'findAllCategorie').pipe(map(value => this.categorie = value));
+    // }
+
+    // findCategorieById(id): Observable<Produit[]> {
+    //     return this.httpClient.get<Produit[]>(this.URL + 'findCategorieById/' + id);
+    // }
+
+    findAllProduit(): Observable<Produit[]> { 
+        console.log(this.URL + 'findAllProduit');
+        return this.httpClient.get<Produit[]>(this.URL + 'findAllProduit').pipe(map(value => this.produit = value));
     }
 
-    findCategorieById(id) {
-        return this.httpClient.get<any[]>(this.URL + 'findCategorieById/' + id);
-    }
+    // findProduitParMotCle(mot): Observable<Produit[]> {
+    //     return this.httpClient.get<Produit[]>(this.URL + 'findProduitParMotCle/' + mot).pipe(map(value => this.produit = value));
+    // }
 
-    findAllProduit() {
-        return this.httpClient.get<any[]>(this.URL + 'findAllProduit').pipe(map(value => this.produit = value));
-    }
+    // findProduitParCategorie(id): Observable<Produit[]> {
+    //     return this.httpClient.get<Produit[]>(this.URL + 'findProduitParCategorie/' + id).pipe(map(value => this.produit = value));
+    // }
 
-    findProduitParMotCle(mot) {
-        return this.httpClient.get<any[]>(this.URL + 'findProduitParMotCle/' + mot).pipe(map(value => this.produit = value));
-    }
+    // findProduitSelectionnes(): Observable<Produit[]> {
+    //     return this.httpClient.get<Produit[]>(this.URL + 'findProduitSelectionnes').pipe(map(value => this.produit = value));
+    // }
 
-    findProduitParCategorie(id) {
-        return this.httpClient.get<any[]>(this.URL + 'findProduitParCategorie/' + id).pipe(map(value => this.produit = value));
-    }
-
-    findProduitSelectionnes() {
-        return this.httpClient.get<any[]>(this.URL + 'findProduitSelectionnes').pipe(map(value => this.produit = value));
-    }
-
-    findProduitById(id) {
-        return this.httpClient.get<any>(this.URL + 'findByIdProduit/' + id);
-    }
+    // findProduitById(id): Observable<Produit[]> {
+    //     return this.httpClient.get<Produit[]>(this.URL + 'findByIdProduit/' + id);
+    // }
 }
