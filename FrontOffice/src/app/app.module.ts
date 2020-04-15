@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +11,8 @@ import { ModifCategorieComponent } from './modif-categorie/modif-categorie.compo
 import { PanierFinalComponent } from './panier-final/panier-final.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { InscriptionComponent } from './inscription/inscription.component';
-
+import { InscriptionService } from 'src/services/inscription.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -28,10 +30,11 @@ import { InscriptionComponent } from './inscription/inscription.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [InscriptionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

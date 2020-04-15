@@ -17,8 +17,8 @@ export class AuthentificationComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup ({
-      compte : new FormControl (null, Validators.required),
-      password : new FormControl (null, Validators.required),
+      nomUtilisateur : new FormControl (null, Validators.required),
+      motDePasse : new FormControl (null, Validators.required),
     });
   } 
        
@@ -26,6 +26,7 @@ export class AuthentificationComponent implements OnInit {
     alert("Tant pis pour toi!!!!");
   }   
 
+  
   verifClient (){
     
   }

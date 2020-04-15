@@ -1,6 +1,8 @@
+import { InscriptionService } from './../../services/inscription.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-inscription',
@@ -9,26 +11,28 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class InscriptionComponent implements OnInit {
   form: FormGroup ;
-  clients: any []=[]
-  index: any;
-  client: any;
-  id: any;
+user : any;
+  
 
-  constructor() { }
+  constructor(private InscriptionService: InscriptionService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup ({
-      name : new FormControl (null, Validators.required),
-      nomcompte : new FormControl (null, Validators.required),
-      motdepasse : new FormControl (null, Validators.required),
-      adresse : new FormControl (null, Validators.required),
-      telephone : new FormControl (null, Validators.required)
+      // id: new FormControl (null, Validators.required),
+      // actif : new FormControl(null, Validators.required),
+      motDePasse : new FormControl (null, Validators.required),
+      nomUtilisateur : new FormControl (null, Validators.required)
      });
   
   }
-  addClient(){
-    this.clients.push(this.form.value);
-    console.log (this.clients);
-  
+
+  addUser(){
+    this.InscriptionService.add(this.form.value).subscribe(response => {
+      this.InscriptionService.users.push(response.body);
+       console.log(this.InscriptionService.users);
+      })
+ 
   }
+  
+  
 }
