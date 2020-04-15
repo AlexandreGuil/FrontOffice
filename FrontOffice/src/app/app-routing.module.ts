@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -12,6 +13,9 @@ import { InscriptionComponent } from './inscription/inscription.component';
 
 
 const routes: Routes = [
+
+  {path: 'home', component: HomeComponent},
+
   {path : 'authentification', component: AuthentificationComponent},
 
   {path : 'inscription', component: InscriptionComponent},
@@ -25,8 +29,8 @@ const routes: Routes = [
   
   ]
   
-  }
-  
+  },
+  {path:'', redirectTo: '/home', pathMatch:'full'}
   ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { ModifCategorieComponent } from './modif-categorie/modif-categorie.compo
 import { PanierFinalComponent } from './panier-final/panier-final.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -22,7 +23,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
     AuthentificationComponent,
     ModifCategorieComponent,
     PanierFinalComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
