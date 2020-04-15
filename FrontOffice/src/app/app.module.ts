@@ -8,11 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { ModifCategorieComponent } from './modif-categorie/modif-categorie.component';
 import { PanierFinalComponent } from './panier-final/panier-final.component';
-<<<<<<< HEAD
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-=======
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
->>>>>>> 3f05e6d4fb6c3dd184cd457f9a97bf5569ceaddb
 import { InscriptionComponent } from './inscription/inscription.component';
 import { HomeComponent } from './home/home.component';
 

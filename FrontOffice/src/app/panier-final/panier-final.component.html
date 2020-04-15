@@ -13,7 +13,6 @@
         <div class="container">
             <h1 class="jumbotron-heading">Votre Panier</h1>
         </div>
-<<<<<<< HEAD
     </section>
 
     <div class="conteneur mb-4">
@@ -38,7 +37,13 @@
 
                         <!-- partie dynamique du tableau -->
 
-                        <tbody>
+                        <tr **ngFor="let p of produitList; let i=index">
+
+                            <td class="text-center">{{}}</td>
+
+                        </tr>
+
+                        <!-- <tbody>
                             <tr>
                                 <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
                                 <td class="text-center">Nom Produit 1</td>
@@ -65,46 +70,37 @@
                                 <td class="text-center">80.00 €</td>
                                 <td class="text-center">80.00 €</td>
                                 <td class="text-center"><button class="btn btn-sm btn-danger" id="hover" onclick="supprimer()">Supprimer<i class="fa fa-trash"></i> </button> </td>
-                            </tr>
+                            </tr> -->
 
-                            <!-- partie dynamique du tableau -->
+                        <!-- partie dynamique du tableau -->
 
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>Sous-total</td>
-                                <td class="text-right">238.80 €</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>Frais de Livraison</td>
-                                <td class="text-right">7,90 €</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><strong>Total</strong></td>
-                                <td class="text-right"><strong>246,70 €</strong></td>
-                            </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sous-total</td>
+                            <td class="text-right">238.80 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Frais de Livraison</td>
+                            <td class="text-right">7,90 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>246,70 €</strong></td>
+                        </tr>
                         </tbody>
                     </table>
                     <br/>
-=======
-        <div class="col mb-3" >
-            <div class="row">
-                <div class="col-sm-12  col-md-4">
-                    <a href="/navigation"><button class="btn btn-block btn-light">CONTINUER SES ACHATS</button></a>
-                </div>
-                <div class="col-sm-12  col-md-4">
-                    <button class="btn btn-block btn-info text-uppercase" onclick= "enregistrer()">Enregistrer le panier</button>
->>>>>>> 3f05e6d4fb6c3dd184cd457f9a97bf5569ceaddb
                 </div>
             </div>
             <div class="col mb-3">
