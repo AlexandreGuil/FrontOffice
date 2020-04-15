@@ -8,7 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { ModifCategorieComponent } from './modif-categorie/modif-categorie.component';
 import { PanierFinalComponent } from './panier-final/panier-final.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { InscriptionComponent } from './inscription/inscription.component';
 
 
@@ -27,6 +27,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule
     
   ],
