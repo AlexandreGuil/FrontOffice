@@ -1,6 +1,6 @@
+import { ClientService } from 'src/service/client.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarreComponent } from './nav-barre/nav-barre.component';
@@ -31,7 +31,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
     ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

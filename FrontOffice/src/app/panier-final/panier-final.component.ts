@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { ClientService } from 'src/service/client.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanierFinalComponent implements OnInit {
 
-  constructor() { }
+  lsitProduit: any[] = [];
+
+  constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit(): void {
+    this.findAllCategorie();
+    // this.findAl
   }
 
 
