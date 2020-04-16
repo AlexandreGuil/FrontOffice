@@ -10,6 +10,7 @@
     margin: 1em auto;
     text-align: center;
     width: 450px;
+    position: relative;
 }
 
 h3 {

@@ -1,10 +1,10 @@
-body {
+/* body {
     color: #404E67;
     background: #fff;
     font-family: 'Open Sans', sans-serif;
     position: relative !important;
     top: 100px !important;
-}
+} */
 
 table {
     text-align: center;
@@ -13,6 +13,8 @@ table {
 .container-table {
     margin: auto;
     max-width: 90%;
+    position: relative;
+    top: 80px;
 }
 
 .table-entiere {

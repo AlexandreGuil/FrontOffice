@@ -17,11 +17,13 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // clientInformation
+    console.log(this.clientService.navigMode);
+
     if(this.clientService.navigMode)
       this.findAllProduit();
     else
       this.lsitProduit = this.clientService.produit;
+    console.log(this.clientService.produit);
   }
 
   findAllProduit() {

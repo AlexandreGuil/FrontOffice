@@ -18,7 +18,7 @@ input:focus {
 }
 
 .navbar {
-    background-image: url('src/assets/images/navbar.jpg');
+    background-image: linear-gradient(rgba(0, 0, 255, 0.36), rgba(0, 149, 255, 0.22)), url('src/assets/images/navbar.jpg');
     background-color: #000;
     border-bottom: 1px solid #000;
 }
@@ -47,14 +47,14 @@ input:focus {
 
 .nav-bottom {
     width: 100%;
-    background-color: transparent;
+    background-color: #00000033;
     padding: 1em;
     /* border-bottom: 1px solid #000; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
-    top: 100px;
+    /* position: relative;
+    top: 100px; */
     /* align-items: center; */
     /* height: 80px; */
 }
@@ -65,7 +65,7 @@ input:focus {
 
 .nav-bottom .btn {
     width: auto;
-    opacity: 0.8;
+    margin-right: 15px;
 }
 
 .categories {
