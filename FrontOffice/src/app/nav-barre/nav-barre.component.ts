@@ -13,7 +13,10 @@ export class NavBarreComponent implements OnInit {
 
   listCategorie: Categorie[] = [];
   listProduit: Produit[] = [];
+  checkBoxStatus: boolean;
   id: number;
+  mot: String;
+
   constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit(): void {
@@ -33,6 +36,17 @@ export class NavBarreComponent implements OnInit {
     this.clientService.findProduitParCategorie(id).subscribe((response: Produit[]) =>
       this.listProduit = response
     );
+  }
+
+  searchSubmit() {
+    
+    this.clientService.findProduitParMotCle(this.mot).subscribe((response: Produit[]) => 
+    this.clientService.produit = response);
+    this.router.navigate(['/navigation']);
+    this.clientService.navigMode = false;
+
+    // console.log(this.mot);
+    // return this.mot;
   }
 
 }

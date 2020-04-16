@@ -34,6 +34,10 @@
                 pour ramener tout les produits appartenant à cette catégorie
             -->
 
+            <!-- <div *ngFor="let p of listProduit">
+                {{p.nomProduit}}
+            </div> -->
+
             <ul class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1" name="dorpdown-cat">
                 <li role="presentation" *ngFor="let cat of listCategorie">
                     <label>
@@ -51,11 +55,9 @@
         </div>
 
 
-        <form class="form-inline my-2 my-lg-0 mr-left">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-info my-2 my-sm-0" type="submit">Search
-      </button>
-
+        <form class="form-inline my-2 my-lg-0 mr-left" (submit)="searchSubmit()">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="mot" [ngModelOptions]="{standalone: true}">
+            <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
         </form>&nbsp;&nbsp;&nbsp;&nbsp;
 
 
@@ -74,9 +76,3 @@
     </nav>
 
 </header>
-
-<body>
-    <div *ngFor="let p of listProduit">
-        {{p.nomProduit}}
-    </div>
-</body>

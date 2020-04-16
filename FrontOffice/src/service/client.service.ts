@@ -9,14 +9,14 @@ import { Observable } from 'rxjs';
 export class ClientService {
     categorie: Categorie[] = [];
     produit: Produit[] = [];
-    editMode: Boolean = false;
+    navigMode: Boolean = true;
     URL = 'http://localhost:8080/apiClient/';
 
     constructor(private httpClient: HttpClient){/* console.log("construct client service"); */};
 
 
     findAllCategorie(): Observable<Categorie[]> {
-        console.log(this.URL + 'findAllCategorie');
+        // console.log(this.URL + 'findAllCategorie');
         return this.httpClient.get<Categorie[]>(this.URL + 'findAllCategorie').pipe(map(value => this.categorie = value));
     }
 
@@ -29,9 +29,9 @@ export class ClientService {
         return this.httpClient.get<Produit[]>(this.URL + 'findAllProduit').pipe(map(value => this.produit = value));
     }
 
-    // findProduitParMotCle(mot): Observable<Produit[]> {
-    //     return this.httpClient.get<Produit[]>(this.URL + 'findProduitParMotCle/' + mot).pipe(map(value => this.produit = value));
-    // }
+    findProduitParMotCle(mot): Observable<Produit[]> {
+        return this.httpClient.get<Produit[]>(this.URL + 'findProduitParMotCle/' + mot).pipe(map(value => this.produit = value));
+    }
 
     findProduitParCategorie(id): Observable<Produit[]> {
         return this.httpClient.get<Produit[]>(this.URL + 'findProduitParCategorie/' + id).pipe(map(value => this.produit = value));
