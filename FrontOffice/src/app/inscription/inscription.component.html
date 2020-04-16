@@ -1,54 +1,55 @@
-
-  <form  name="inscription" class="formulaireinscription" [formGroup]="form">
-    <h2><b>Inscrivez-vous!</b></h2>
+<form name="inscription" class="formulaireinscription" [formGroup]="form">
+    <h3><b>Inscrivez-vous!</b></h3>
 
     <!-- <div class="form-group col-md-6"> 
-      <label for="id">Id</label>
-      <input type="number" id="id" class="form-control" formControlName="id"/> 
-  
-    </div> 
+    <label for="id">Id</label>
+    <input type="number" id="id" class="form-control" formControlName="id"/> 
+
+  </div> 
 
 
-    <div class="form-group col-md-6"> 
-      <label for="actif">actif</label>
-      <input type="text" id="actif" class="form-control" formControlName="actif"/>
-  </div> -->
+  <div class="form-group col-md-6"> 
+    <label for="actif">actif</label>
+    <input type="text" id="actif" class="form-control" formControlName="actif"/>
+</div> -->
 
 
-  <div class="form-group col-md-6"> <!-- b-->
-    <label for="nomUtilisateur">Nom</label>
-    <input type="text" id="nomUtilisateur" class="form-control" formControlName="nomUtilisateur"/>
-</div>
+    <div class="form-group col-md-6">
+        <!-- b-->
+        <label for="nomUtilisateur">Nom</label>
+        <input type="text" id="nomUtilisateur" class="form-control" formControlName="nomUtilisateur" placeholder="Nom d'utilisateur" title="Veuillez remplir ce champ" required />
+    </div>
 
 
-<div class="form-group col-md-6"> <!-- b-->
-  <label for="motDePasse">Mot de passe</label>
-  <input type="password" id="motDePasse" class="form-control" formControlName="motDePasse"/>
+    <div class="form-group col-md-6">
+        <!-- b-->
+        <label for="motDePasse">Mot de passe</label>
+        <input type="password" id="motDePasse" class="form-control" formControlName="motDePasse" placeholder="Mot de passe" title="Veuillez remplir ce champ" required/>
 
-</div>
+    </div>
 
 
 
     <!-- <div class="form-group" >
-     Name <input type="text" class="form-control"  placeholder="name" formControlName="name"/>
-    </div> -->
+   Name <input type="text" class="form-control"  placeholder="name" formControlName="name"/>
+  </div> -->
     <!-- <div class="form-group">
-     Nom de compte
-      <input type="text" class="form-control" placeholder="Nom de compte" formControlName="nomcompte" >
-    </div> -->
-      <!-- <div class="form-group">
-      Mot de passe
-      <input type="password" class="form-control" placeholder="Mot de passe" formControlName="motdepasse"/>
-    </div> -->
-      <!-- <div class="form-group">
-      Adresse
-      <input type="text" class="form-control" placeholder="Adresse" formControlName="adresse">
-    </div>
-      <div class="form-group">
-     Telephone
-      <input type="text" class="form-control"  placeholder="N° de Telephone" formControlName="telephone">
-    </div> -->
-    <div>
-    <input type="submit" class="btn btn-success" value="S'inscrire" (click)="addUser()" >
+   Nom de compte
+    <input type="text" class="form-control" placeholder="Nom de compte" formControlName="nomcompte" >
+  </div> -->
+    <!-- <div class="form-group">
+    Mot de passe
+    <input type="password" class="form-control" placeholder="Mot de passe" formControlName="motdepasse"/>
+  </div> -->
+    <!-- <div class="form-group">
+    Adresse
+    <input type="text" class="form-control" placeholder="Adresse" formControlName="adresse">
   </div>
-  </form>
+    <div class="form-group">
+   Telephone
+    <input type="text" class="form-control"  placeholder="N° de Telephone" formControlName="telephone">
+  </div> -->
+    <div>
+        <input type="submit" class="btn btn-success" value="S'inscrire" (click)="addUser()">
+    </div>
+</form>

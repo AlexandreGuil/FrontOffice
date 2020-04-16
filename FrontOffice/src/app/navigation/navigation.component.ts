@@ -10,24 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  // lsitCategorie: Produit[] = [];
   lsitProduit: Produit[] = [];
 
   constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit(): void {
-    // this.findAllCategorie();
     this.findAllProduit();
   }
 
-  // findAllCategorie() {
-  //   this.clientService.findAllCategorie().subscribe((value: any[]) => 
-  //   this.lsitCategorie = value
-  //   );
-  // }
 
   findAllProduit() {
-    this.clientService.findAllProduit().subscribe((value: any[]) =>
+    this.clientService.findAllProduit().subscribe((value: Produit[]) =>
     this.lsitProduit = value
     );
   }

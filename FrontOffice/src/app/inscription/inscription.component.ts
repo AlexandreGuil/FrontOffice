@@ -1,4 +1,4 @@
-import { InscriptionService } from './../../services/inscription.service';
+import { InscriptionService } from 'src/service/inscription.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';

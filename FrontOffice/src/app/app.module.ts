@@ -1,3 +1,4 @@
+import { InscriptionService } from 'src/service/inscription.service';
 import { ClientService } from 'src/service/client.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,7 @@ import { ModifCategorieComponent } from './modif-categorie/modif-categorie.compo
 import { PanierFinalComponent } from './panier-final/panier-final.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InscriptionComponent } from './inscription/inscription.component';
-import { InscriptionService } from 'src/services/inscription.service';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 

@@ -1,80 +1,95 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>test nav barre</title>
-	
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>test nav barre</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
 
-  </head>
+</head>
 
 
-  <header>
+<header>
 
-	<nav class="navbar" >
+    <nav class="navbar">
 
- 
-		<!-- ajout du btn home -->
-  <a class="navbar-brand " href="#">
-    <img src="assets/images/home_button.jpg" width="50" height="50" alt="image" style ="border-radius: 30px;"/> 
-  </a>
 
-<!-- ajout d'une catégorie dropdown -->
+        <!-- ajout du btn home -->
+        <a class="navbar-brand " href="#">
+            <img src="assets/images/home_button.jpg" width="50" height="50" alt="image" style="border-radius: 30px;" />
+        </a>
 
-  <div class="dropdown mr-auto">
-    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Catégories
+
+        <tr *ngFor="let c of listCategorie, let i=index">
+            <td>{{c.designation}}</td>
+        </tr>
+
+
+
+        <!-- ajout d'une catégorie dropdown -->
+
+        <div class="dropdown mr-auto">
+            <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Catégories
     </button>
 
-    <ul class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation">
-        <label>
+            <!-- <ul *ngFor="let cat of list lsitCategorie, let i=index" class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1" name="dorpdown-cat">
+                <li role="presentation">
+                    <label>
+                      <input type="checkbox"> {{cat.designation}}
+                    </label>
+                </li>
+            </ul> -->
+
+            <!-- <ul class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation">
+                    <label>
       <input type="checkbox"> Catégorie 1
         </label>
-      </li>
-      <li role="presentation">
-         <label>
+                </li>
+                <li role="presentation">
+                    <label>
       <input type="checkbox"> Catégorie 2
         </label>
-      </li>
-      <li role="presentation">
-         <label>
+                </li>
+                <li role="presentation">
+                    <label>
       <input type="checkbox"> Catégorie 3
         </label>
-      </li>    
-    </ul>
-  </div><br>
+                </li>
+            </ul> -->
+        </div><br>
 
 
-<!-- Ajout d'un text bienvenue -->
-<div class="navbar-text mr-auto" >
-  Welcome To Our E-Shop !
-      <span style='font-size:30px;'></span>
-</div> 
+        <!-- Ajout d'un text bienvenue -->
+        <div class="navbar-text mr-auto">
+            Welcome To Our E-Shop !
+            <span style='font-size:30px;'></span>
+        </div>
 
 
-    <form class="form-inline my-2 my-lg-0 mr-left">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-info my-2 my-sm-0" type="submit" >Search
+        <form class="form-inline my-2 my-lg-0 mr-left">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-info my-2 my-sm-0" type="submit">Search
       </button>
 
-    </form>&nbsp;&nbsp;&nbsp;&nbsp;
+        </form>&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-    <!-- ajout bouton connexion / inscription -->
-  <form class="form-inline mr-left ">
-    <a href="/authentification"><button class="btn btn-success" type="button" >Connexion
+        <!-- ajout bouton connexion / inscription -->
+        <form class="form-inline mr-left ">
+            <a href="/authentification"><button class="btn btn-success" type="button" >Connexion
     </button></a>&nbsp;&nbsp;
-    <a href="/inscription"><button class="btn btn-success" type="button" >Inscription
+            <a href="/inscription"><button class="btn btn-success" type="button" >Inscription
     </button></a>&nbsp;&nbsp;
-  </form>
+        </form>
 
 
 
 
-  
-</nav>
+
+    </nav>
 
 </header>
