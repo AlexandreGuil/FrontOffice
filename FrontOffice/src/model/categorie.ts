@@ -1,7 +1,7 @@
 import { Produit } from './produit';
 export class Categorie {
-    categorie_id: number;
-    designation: String;
+    idCategorie: number;
+    nomCategorie: String;
     photo: String;
     description: String;
     produits: Produit[];

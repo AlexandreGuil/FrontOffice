@@ -1,3 +1,4 @@
+import { Categorie } from './../../model/categorie';
 import { Produit } from './../../model/produit';
 import { Router } from '@angular/router';
 import { ClientService } from 'src/service/client.service';
@@ -17,7 +18,6 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
     this.findAllProduit();
   }
-
 
   findAllProduit() {
     this.clientService.findAllProduit().subscribe((value: Produit[]) =>
