@@ -11,7 +11,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+ 
   lsitProduit: Produit[] = [];
+  panierproduits: any[]=[];
+   listProduitTest= [    // LISTE FICTIVE D OBJETS POUR TESTER LES FONCTIONNALITES. A DESACTIVER POUR LE RENDU FINAL
+    {
+      idProduit:1,
+      photo:"photo",
+      nomProduit: "Rasoir",
+      categorie_id:1,
+      description:"Ce petit outil vous dressera au poil",
+      
+    },
+    {
+      idProduit:2,
+      photo:"ouistiti",
+      nomProduit: "Belvedere",
+      categorie_id:2,
+      description:"Personne ne sait ce que c'est",
+      
+    },
+    {
+      idProduit:3,
+      photo:"cheese",
+      nomProduit: "Ordinateur",
+      categorie_id:3,
+      description:"Puissante machine",
+     
+    }
+
+  ]; 
 
   constructor(private clientService: ClientService, private router: Router) { }
 
@@ -32,4 +61,19 @@ export class NavigationComponent implements OnInit {
     );
   }
 
+    ajouterPanier(i){
+      this.panierproduits.push(this.listProduitTest[i]); // ICI, remplacer listProduitTest par lsitProduit
+
+
+    }
+    supprPanier(i){
+      delete this.panierproduits[i];
+     
+    }
+
+    payer(){
+      delete this.panierproduits;
+      alert("Transaction acceptée");
+      this.router.navigate(['home']);
+    }
 }

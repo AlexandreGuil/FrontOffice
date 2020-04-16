@@ -11,10 +11,10 @@
             <div class="titre-table">
                 <div class="row-titre">
                     <div class="titre">
-                        <h3>Liste des <b style="color:#17a2b8">Catégories</b></h3>
+                        <h3>Liste des <b style="color:#17a2b8">Produits</b></h3>
                     </div>
                     <div class="param">
-                        <button type="button" class="btn btn-info btn-item-cat"><span class="glyphicon glyphicon-plus"></span> Ajouter une Catégorie</button>
+                        <a href="/categories"><button type="button" class="btn btn-info btn-item-cat"><span class="glyphicon glyphicon-plus"></span> Ajouter une Catégorie</button></a>
                         <a href="/navigation"><button type="button" class="btn btn-success btn-item-cat"><span class="glyphicon glyphicon-pencil"></span> Modifier les produits</button></a>
                     </div>
                 </div>
@@ -25,24 +25,21 @@
                         <th>Num.</th>
                         <th>Photo</th>
                         <th>Nom</th>
-                        <th>Categorie</th>
-                        <th>Quantité</th>
+                        <th>Categorie</th><!--Quantité removed-->
                         <th>Description</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
 
-                    <tr *ngFor="let p of lsitProduit, let i=index">
+                    <tr *ngFor="let p of listProduitTest; let i=index"> <!-- Remettre lsitProduit pour faire apparaître la liste de la base de donnée -->
                         <td>{{p.idProduit}}</td>
                         <td>{{p.photo}}</td>
                         <td>{{p.nomProduit}}</td>
                         <td>{{p.categorie_id}}</td>
-                        <td>{{p.quantite}}</td>
-                        <td>{{p.description}}</td>
-                        <td>{{p.selectione}}</td>
+                        <td>{{p.description}}</td> <!--Selectione retiré-->
                         <td class="action-buttons">
-                            <button type="button" class="btn btn-outline-info button-lst-prod"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                            <button type="button" class="btn btn-outline-info button-lst-prod" (click)="ajouterPanier(i)"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
                             <button type="button" class="btn btn-outline-success button-lst-prod"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
                             <button type="button" class="btn btn-outline-danger button-lst-prod"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
                         </td>
@@ -93,6 +90,7 @@
         </div>
     </div>
 
+    <!-- ICI ON AJOUTE L INTEGRALITE DE PANIERPRODUIT. PANIERPRODUIT NE SERT PLUS A RIEN CAR IL SE TROUVE A PRESENT DANS NAVIGATION -->
 
     <div class="container-table">
         <div class="table-entiere">
@@ -104,9 +102,9 @@
                     <table class="tableau">
                         <thead>
                             <tr>
-                                <th scope="col"> </th>
-                                <th scope="col" class="text-center">Produit</th>
-                                <th scope="col" class="text-center">Description</th>
+                                <th scope="col" class="text-center">Photo produit</th>
+                                <th scope="col" class="text-center">ID Produit</th>
+                                <th scope="col" class="text-center">Nom produit</th> 
                                 <th scope="col" class="text-center">Quantité</th>
                                 <th scope="col" class="text-center">Prix</th>
                                 <th scope="col" class="text-center">Total</th>
@@ -115,31 +113,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                                <td class="text-center">Nom Produit 1</td>
-                                <td class="text-center">Description Produit 1</td>
-                                <td class="text-center"><input type="number" value="1" min="1" max="1000" step="1" /></td>
-                                <td class="text-center">124.90 &euro;</td>
-                                <td class="text-center">124,90 &euro;</td>
-                                <td class="text-center"><button class="btn btn-sm btn-danger" id="hover" onclick="supprimer()">Supprimer<i class="fa fa-trash"></i> </button> </td>
-                            </tr>
-                            <tr>
-                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                                <td class="text-center">Nom Produit 2</td>
-                                <td class="text-center">Description Produit 2</td>
-                                <td class="text-center"><input type="number" value="1" min="1" max="1000" step="1" /></td>
-                                <td class="text-center">33.90 &euro;</td>
-                                <td class="text-center">33,90 &euro;</td>
-                                <td class="text-center"><button class="btn btn-sm btn-danger" id="hover" onclick="supprimer()">Supprimer<i class="fa fa-trash"></i> </button> </td>
-                            </tr>
-                            <tr>
-                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                                <td class="text-center">Nom Produit 3</td>
-                                <td class="text-center">Description Produit 3</td>
-                                <td class="text-center"><input type="number" value="1" min="1" max="1000" step="1" /></td>
-                                <td class="text-center">37.90 &euro;</td>
-                                <td class="text-center" id="produit1"></td>
-                                <td class="text-center"><button class="btn btn-sm btn-danger" id="hover" onclick="supprimer()">Supprimer<i class="fa fa-trash"></i> </button> </td>
+                                <tr *ngFor="let p of panierproduits; let i=index">
+                                    <td>{{p.photo}}</td>
+                                    <td>{{p.idProduit}}</td>
+                                    <td>{{p.nomProduit}}</td>
+                                    <td *ngIf="i!=null"><input type="number"/></td>    <!-- le ngIf permet de ne pas faire apparaître ces éléments MEME dans le tableau vide -->
+                                    <td *ngIf="i!=null"></td>  
+                                    <td *ngIf="i!=null"></td>
+                                    <td *ngIf="i!=null"><input type="submit" class="btn btn-danger" value="supprimer" (click)="supprPanier(i)"/></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -154,8 +135,8 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>Frais de Livraison</td>
-                                <td class="text-right">7,90 €</td>
+                                <td>Nombre de produits</td>
+                                <td class="text-right">{{panierproduits.length}}</td>   <!-- Remplacement des frais de port par "Nombre de produits" qui compte les lignes -->                   
                             </tr>
                             <tr>
                                 <td></td>
@@ -171,9 +152,7 @@
                 </div>
             </div>
             <div class="action-buttons-panier">
-                <button class="btn btn-success button-panier text-uppercase" onclick="continuer()">Continuer ses achats</button>
-                <button class="btn btn-info button-panier text-uppercase" onclick="enregistrer()">Enregistrer le panier</button>
-                <button class="btn btn-danger button-panier text-uppercase" onclick="payer()">Payer</button>
+                <button class="btn btn-danger button-panier text-uppercase" (click)="payer()">Payer</button>
             </div>
 
         </div>
