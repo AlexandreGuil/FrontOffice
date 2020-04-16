@@ -1,7 +1,9 @@
 body {
     color: #404E67;
-    background: #F5F7FA;
+    background: #fff;
     font-family: 'Open Sans', sans-serif;
+    position: relative !important;
+    top: 100px !important;
 }
 
 table {

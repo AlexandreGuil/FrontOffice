@@ -30,6 +30,7 @@ export class ClientService {
     }
 
     findProduitParMotCle(mot): Observable<Produit[]> {
+        console.log(this.URL + 'findProduitParMotCle/' + mot)
         return this.httpClient.get<Produit[]>(this.URL + 'findProduitParMotCle/' + mot).pipe(map(value => this.produit = value));
     }
 

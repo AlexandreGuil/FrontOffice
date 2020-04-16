@@ -21,9 +21,9 @@ export class NavBarreComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAllCategorie();
-    console.log(this.listCategorie);
+    // console.log(this.listCategorie);
 
-    this.findProduitParCategorie(1);
+    // this.findProduitParCategorie(1);
   }
 
   findAllCategorie() {
@@ -39,14 +39,12 @@ export class NavBarreComponent implements OnInit {
   }
 
   searchSubmit() {
-    
+    console.log(this.mot);
     this.clientService.findProduitParMotCle(this.mot).subscribe((response: Produit[]) => 
     this.clientService.produit = response);
+    console.log(this.clientService.produit);
     this.router.navigate(['/navigation']);
     this.clientService.navigMode = false;
-
-    // console.log(this.mot);
-    // return this.mot;
   }
 
 }

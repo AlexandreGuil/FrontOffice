@@ -2,6 +2,8 @@ body {
     color: #404E67;
     background: #F5F7FA;
     font-family: 'Open Sans', sans-serif;
+    position: relative !important;
+    top: 150px !important;
 }
 
 table {

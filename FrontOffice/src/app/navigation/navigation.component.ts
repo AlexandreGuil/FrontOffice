@@ -17,6 +17,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // clientInformation
     if(this.clientService.navigMode)
       this.findAllProduit();
     else

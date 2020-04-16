@@ -6,28 +6,53 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-
 </head>
 
 
 <header>
 
-    <nav class="navbar">
-
+    <nav class="navbar nav-top">
 
         <!-- ajout du btn home -->
         <a class="navbar-brand " href="#">
-            <img src="assets/images/home_button.jpg" width="50" height="50" alt="image" style="border-radius: 30px;" />
+            <img src="assets/images/logo_eCommerce.png" width="60" height="60" alt="logo" />
         </a>
 
+        <ul class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1" name="dorpdown-cat">
+            <li role="presentation" *ngFor="let cat of listCategorie">
+                <label>
+                        <input type="checkbox"> {{cat.nomCategorie}} <!-- (click)="expression" -->
+                    </label>
+            </li>
+        </ul>
+        <!-- </div> -->
+
+
+        <!-- Ajout d'un text bienvenue -->
+        <div class="navbar-text">
+            Welcome To Our E-Shop !
+            <span style='font-size:30px;'></span>
+        </div>
+
+
+        <!-- ajout bouton connexion / inscription -->
+        <form class="form-inline">
+            <a href="/authentification">
+                <button class="btn btn-success" type="button">Connexion</button></a>
+            <a href="/inscription">
+                <button class="btn btn-success" type="button">Inscription</button>
+            </a>
+        </form>
+    </nav>
+
+    <nav class="nav-bottom">
 
 
         <!-- ajout d'une catégorie dropdown -->
 
-        <div class="dropdown mr-auto">
-            <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Catégories</button>
+        <div class="dropdown">
+            <!-- <div class="categories dropdown-toggle" id="menu1" data-toggle="dropdown">Catégories</div> -->
+            <button class="btn btn-primary dropdown-toggle categories" id="menu1" type="button" data-toggle="dropdown">Catégories</button>
 
             <!--
                 coder un truc pour récupérer l'id de la categorie et utiliser la  méthode findProduitParCategorie(id) du coté back 
@@ -37,41 +62,20 @@
             <!-- <div *ngFor="let p of listProduit">
                 {{p.nomProduit}}
             </div> -->
-
             <ul class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1" name="dorpdown-cat">
-                <li role="presentation" *ngFor="let cat of listCategorie">
-                    <label>
-                      <input type="checkbox"> {{cat.nomCategorie}} <!-- (click)="expression" -->
-                    </label>
+                <li role="presentation" class="categorie" *ngFor="let cat of listCategorie">
+                    <input type="checkbox"> {{cat.nomCategorie}}
+                    <!-- (click)="expression" -->
                 </li>
             </ul>
-        </div><br>
-
-
-        <!-- Ajout d'un text bienvenue -->
-        <div class="navbar-text mr-auto">
-            Welcome To Our E-Shop !
-            <span style='font-size:30px;'></span>
         </div>
 
+        <!-- avec angular http://www.angulartutorial.net/2017/11/multi-checkbox-dropdown-component-using.html -->
 
         <form class="form-inline my-2 my-lg-0 mr-left" (submit)="searchSubmit()">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="mot" [ngModelOptions]="{standalone: true}">
-            <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
-        </form>&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-        <!-- ajout bouton connexion / inscription -->
-        <form class="form-inline mr-left ">
-            <a href="/authentification"><button class="btn btn-success" type="button" >Connexion
-    </button></a>&nbsp;&nbsp;
-            <a href="/inscription"><button class="btn btn-success" type="button" >Inscription
-    </button></a>&nbsp;&nbsp;
+            <input class="form-control mr-sm-2" type="search" placeholder="Notebook..." aria-label="Search" [(ngModel)]="mot" [ngModelOptions]="{standalone: true}">
+            <button class="btn btn-info my-2 my-sm-0" type="submit">Recherche</button>
         </form>
-
-
-
-
 
     </nav>
 
