@@ -3,20 +3,33 @@ body {
     background: #F5F7FA;
     font-family: 'Open Sans', sans-serif;
 }
+
+.title-panier {
+    width: 99%;
+    border: 1px solid #0000002e;
+    /* border-radius: 10px; */
+    height: auto;
+    box-shadow: 0 0 3px grey;
+    background: #faf3e8;
+    margin: 10px auto;
+}
+
 table {
     text-align: center;
 }
 
-.table-entiere {
+
+/* .table-entiere {
     width: 800px;
     margin: 30px auto;
     background: #ccc;
-    padding: 20px;  
+    padding: 20px;
     box-shadow: 5px 5px 5px grey;
     border-radius: 5px;
-}
+} */
 
-.titre-table {
+
+/* .titre-table {
     padding-bottom: 10px;
     margin: 0 0 10px;
 }
@@ -24,9 +37,10 @@ table {
 .titre-table h2 {
     margin: 6px 0 0;
     font-size: 26px;
-}
+} */
 
-.table-title .add-new {
+
+/* .table-title .add-new {
     float: right;
     height: 30px;
     font-weight: bold;
@@ -40,10 +54,10 @@ table {
 .table-title .add-new i {
     margin-right: 4px;
 }
+ */
 
 table.table {
     table-layout: fixed;
-
 }
 
 table.table th:last-child {
@@ -55,7 +69,7 @@ table.table td a {
     display: inline-block;
     margin: 0 5px;
     min-width: 36px;
-}   
+}
 
 table.table td a.add {
     color: #27C46B;
@@ -78,7 +92,7 @@ table.table td a.add i {
     margin-right: -1px;
     position: relative;
     top: 3px;
-}  
+}
 
 table.table .form-control {
     height: 32px;
@@ -93,4 +107,27 @@ table.table .form-control.error {
 
 table.table td .add {
     display: none;
+}
+
+.btn {
+    width: auto;
+    opacity: 0.8;
+}
+
+.button-panier {
+    /* max-width: 140px; */
+    margin: 5px;
+}
+
+.action-buttons-panier {
+    width: 100%;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.row {
+    margin: auto 0 !important;
 }

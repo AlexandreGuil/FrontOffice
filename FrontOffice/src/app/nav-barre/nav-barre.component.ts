@@ -1,3 +1,4 @@
+import { Produit } from './../../model/produit';
 import { Router } from '@angular/router';
 import { ClientService } from 'src/service/client.service';
 import { Categorie } from './../../model/categorie';
@@ -23,6 +24,9 @@ export class NavBarreComponent implements OnInit {
     this.clientService.findAllCategorie().subscribe((value: Categorie[]) => 
     this.listCategorie = value
     );
+  }
+
+  findProduitParCategorie(id) {
   }
 
 }

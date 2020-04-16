@@ -33,9 +33,9 @@ export class ClientService {
     //     return this.httpClient.get<Produit[]>(this.URL + 'findProduitParMotCle/' + mot).pipe(map(value => this.produit = value));
     // }
 
-    // findProduitParCategorie(id): Observable<Produit[]> {
-    //     return this.httpClient.get<Produit[]>(this.URL + 'findProduitParCategorie/' + id).pipe(map(value => this.produit = value));
-    // }
+    findProduitParCategorie(id): Observable<Produit[]> {
+        return this.httpClient.get<Produit[]>(this.URL + 'findProduitParCategorie/' + id).pipe(map(value => this.produit = value));
+    }
 
     // findProduitSelectionnes(): Observable<Produit[]> {
     //     return this.httpClient.get<Produit[]>(this.URL + 'findProduitSelectionnes').pipe(map(value => this.produit = value));

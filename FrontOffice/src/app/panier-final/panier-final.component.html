@@ -4,14 +4,12 @@
 <head>
     <title>Panier</title>
     <meta charset="utf-8">
-
-
 </head>
 
 <body>
-    <section class="jumbotron text-center">
+    <section class="title-panier text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Votre Panier</h1>
+            <h2 class="jumbotron-heading">Votre <b style="color:#28a745">Panier</b></h2>
         </div>
     </section>
 
@@ -107,17 +105,22 @@
                     <br/>
                 </div>
             </div>
-            <div class="col mb-3">
-                <div class="row">
-                    <div class="col-sm-12  col-md-4">
-                        <button class="btn btn-block btn-light" onclick="continuer()">Continuer ses achats</button>
-                    </div>
-                    <div class="col-sm-12  col-md-4">
-                        <button class="btn btn-block btn-info text-uppercase" onclick="enregistrer()">Enregistrer le panier</button>
-                    </div>
-                    <div class="col-sm-12 col-md-4 text-right">
-                        <button class="btn btn-block btn-success text-uppercase" onclick="payer()">Payer</button>
-                    </div>
-                </div>
+            <div class="action-buttons-panier">
+                <button class="btn btn-success button-panier text-uppercase" onclick="continuer()">Continuer ses achats</button>
+                <button class="btn btn-info button-panier text-uppercase" onclick="enregistrer()">Enregistrer le panier</button>
+                <button class="btn btn-danger button-panier text-uppercase" onclick="payer()">Payer</button>
             </div>
+            <!--             <div class="col mb-3">
+    <div class="row">
+        <div class="col-sm-12  col-md-4">
+            <button class="btn btn-block btn-light" onclick="continuer()">Continuer ses achats</button>
+        </div>
+        <div class="col-sm-12  col-md-4">
+            <button class="btn btn-block btn-info text-uppercase" onclick="enregistrer()">Enregistrer le panier</button>
+        </div>
+        <div class="col-sm-12 col-md-4 text-right">
+            <button class="btn btn-block btn-success text-uppercase" onclick="payer()">Payer</button>
+        </div>
+    </div>
+</div> -->
         </div>
