@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Admin Catégorie</title>
-
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-table">
         <div class="table-entiere">
             <div class="titre-table">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <h2>Liste des <b>Produits</b></h2>
+                <div class="row-titre">
+                    <div class="titre">
+                        <h3>Liste des <b style="color:#17a2b8">Catégories</b></h3>
                     </div>
-                    <div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Ajouter un Produit</button>
+                    <div class="param">
+                        <button type="button" class="btn btn-info btn-item-cat"><span class="glyphicon glyphicon-plus"></span> Ajouter une Catégorie</button>
+                        <a href="/navigation"><button type="button" class="btn btn-success btn-item-cat"><span class="glyphicon glyphicon-pencil"></span> Modifier les produits</button></a>
                     </div>
                 </div>
             </div>
@@ -44,25 +44,64 @@
                         <td>{{p.quantite}}</td>
                         <td>{{p.description}}</td>
                         <td>{{p.selectione}}</td>
+                        <td class="action-buttons">
+                            <button type="button" class="btn btn-outline-info button-lst-prod"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                            <button type="button" class="btn btn-outline-success button-lst-prod"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                            <button type="button" class="btn btn-outline-danger button-lst-prod"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
+                        </td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>No Photo</td>
+                        <td>Hérisson Borgne</td>
+                        <td>Catégorie 1</td>
+                        <td>16</td>
+                        <td>Description : pas besoin</td>
                         <td>
                             <button type="button" class="btn btn-outline-info"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
                             <button type="button" class="btn btn-outline-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
                             <button type="button" class="btn btn-outline-danger"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
                         </td>
                     </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>No Photo</td>
+                        <td>Hérisson à Paillettes</td>
+                        <td>Catégorie 1</td>
+                        <td>4</td>
+                        <td>Description : Il est tout mini avec son bérêt rose</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-info"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                            <button type="button" class="btn btn-outline-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                            <button type="button" class="btn btn-outline-danger"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>No Photo</td>
+                        <td>Vélociraptor</td>
+                        <td>Catégorie 2</td>
+                        <td>2</td>
+                        <td>Description : Un poulet préhistorique</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-info"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
+                            <button type="button" class="btn btn-outline-success"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
+                            <button type="button" class="btn btn-outline-danger"><span class="glyphicon glyphicon-trash"></span> Supprimer</button>
+                        </td>
+                    </tr> -->
+
                 </tbody>
             </table>
         </div>
     </div>
 
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Votre Panier</h1>
-        </div>
-    </section>
 
-    <div class="conteneur mb-4">
-        <div class="row">
+    <div class="container-table">
+        <div class="table-entiere">
+            <div class="title-panier">
+                <h2>Votre <b style="color:#28a745">Panier</b></h2>
+            </div>
             <div class="col-12">
                 <div class="div-tableau">
                     <table class="tableau">
@@ -134,18 +173,10 @@
                     <br/>
                 </div>
             </div>
-            <div class="col mb-3">
-                <div class="row">
-                    <div class="col-sm-12  col-md-4">
-                        <button class="btn btn-block btn-light" onclick="continuer()">Continuer ses achats</button>
-                    </div>
-                    <div class="col-sm-12  col-md-4">
-                        <button class="btn btn-block btn-info text-uppercase" onclick="enregistrer()">Enregistrer le panier</button>
-                    </div>
-                    <div class="col-sm-12 col-md-4 text-right">
-                        <button class="btn btn-block btn-success text-uppercase" onclick="payer()">Payer</button>
-                    </div>
-                </div>
+            <div class="action-buttons-panier">
+                <button class="btn btn-success button-panier text-uppercase" onclick="continuer()">Continuer ses achats</button>
+                <button class="btn btn-info button-panier text-uppercase" onclick="enregistrer()">Enregistrer le panier</button>
+                <button class="btn btn-danger button-panier text-uppercase" onclick="payer()">Payer</button>
             </div>
 
         </div>

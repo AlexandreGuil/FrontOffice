@@ -29,6 +29,11 @@
         <div class="dropdown mr-auto">
             <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Catégories</button>
 
+            <!--
+                coder un truc pour récupérer l'id de la categorie et utiliser la  méthode findProduitParCategorie(id) du coté back 
+                pour ramener tout les produits appartenant à cette catégorie
+            -->
+
             <ul class="dropdown-menu checkbox-menu" role="menu" aria-labelledby="menu1" name="dorpdown-cat">
                 <li role="presentation" *ngFor="let cat of listCategorie">
                     <label>
@@ -69,3 +74,9 @@
     </nav>
 
 </header>
+
+<body>
+    <div *ngFor="let p of listProduit">
+        {{p.nomProduit}}
+    </div>
+</body>

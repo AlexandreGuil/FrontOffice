@@ -12,12 +12,15 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarreComponent implements OnInit {
 
   listCategorie: Categorie[] = [];
-
+  listProduit: Produit[] = [];
+  id: number;
   constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAllCategorie();
     console.log(this.listCategorie);
+
+    this.findProduitParCategorie(1);
   }
 
   findAllCategorie() {
@@ -27,6 +30,9 @@ export class NavBarreComponent implements OnInit {
   }
 
   findProduitParCategorie(id) {
+    this.clientService.findProduitParCategorie(id).subscribe((response: Produit[]) =>
+      this.listProduit = response
+    );
   }
 
 }
