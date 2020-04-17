@@ -42,7 +42,7 @@ export class NavBarreComponent implements OnInit {
     console.log(this.mot);
     this.clientService.findProduitParMotCle(this.mot).subscribe((response: Produit[]) => 
     this.clientService.produit = response);
-    console.log(this.clientService.produit);
+    // console.log(this.clientService.produit);
     this.router.navigate(['/navigation']);
     this.clientService.navigMode = false;
   }

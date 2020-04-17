@@ -25,19 +25,22 @@
                         <th>Num.</th>
                         <th>Photo</th>
                         <th>Nom</th>
-                        <th>Categorie</th><!--Quantité removed-->
+                        <th>Categorie</th>
+                        <!--Quantité removed-->
                         <th>Description</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
 
-                    <tr *ngFor="let p of listProduitTest; let i=index"> <!-- Remettre lsitProduit pour faire apparaître la liste de la base de donnée -->
+                    <tr *ngFor="let p of lsitProduit; let i=index">
+                        <!-- Remettre lsitProduit pour faire apparaître la liste de la base de donnée -->
                         <td>{{p.idProduit}}</td>
                         <td>{{p.photo}}</td>
                         <td>{{p.nomProduit}}</td>
                         <td>{{p.categorie_id}}</td>
-                        <td>{{p.description}}</td> <!--Selectione retiré-->
+                        <td>{{p.description}}</td>
+                        <!--Selectione retiré-->
                         <td class="action-buttons">
                             <button type="button" class="btn btn-outline-info button-lst-prod" (click)="ajouterPanier(i)"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
                             <button type="button" class="btn btn-outline-success button-lst-prod"><span class="glyphicon glyphicon-pencil"></span> Modifier</button>
@@ -104,7 +107,7 @@
                             <tr>
                                 <th scope="col" class="text-center">Photo produit</th>
                                 <th scope="col" class="text-center">ID Produit</th>
-                                <th scope="col" class="text-center">Nom produit</th> 
+                                <th scope="col" class="text-center">Nom produit</th>
                                 <th scope="col" class="text-center">Quantité</th>
                                 <th scope="col" class="text-center">Prix</th>
                                 <th scope="col" class="text-center">Total</th>
@@ -117,35 +120,37 @@
                                     <td>{{p.photo}}</td>
                                     <td>{{p.idProduit}}</td>
                                     <td>{{p.nomProduit}}</td>
-                                    <td *ngIf="i!=null"><input type="number"/></td>    <!-- le ngIf permet de ne pas faire apparaître ces éléments MEME dans le tableau vide -->
-                                    <td *ngIf="i!=null"></td>  
+                                    <td *ngIf="i!=null"><input type="number" /></td>
+                                    <!-- le ngIf permet de ne pas faire apparaître ces éléments MEME dans le tableau vide -->
                                     <td *ngIf="i!=null"></td>
-                                    <td *ngIf="i!=null"><input type="submit" class="btn btn-danger" value="supprimer" (click)="supprPanier(i)"/></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>Sous-total</td>
-                                <td class="text-right">238.80 €</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>Nombre de produits</td>
-                                <td class="text-right">{{panierproduits.length}}</td>   <!-- Remplacement des frais de port par "Nombre de produits" qui compte les lignes -->                   
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><strong>Total</strong></td>
-                                <td class="text-right"><strong>246,70 €</strong></td>
-                            </tr>
+                                    <td *ngIf="i!=null"></td>
+                                    <td *ngIf="i!=null"><input type="submit" class="btn btn-danger" value="supprimer" (click)="supprPanier(i)" /></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Sous-total</td>
+                                    <td class="text-right">238.80 €</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Nombre de produits</td>
+                                    <td class="text-right">{{panierproduits.length}}</td>
+                                    <!-- Remplacement des frais de port par "Nombre de produits" qui compte les lignes -->
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><strong>Total</strong></td>
+                                    <td class="text-right"><strong>246,70 €</strong></td>
+                                </tr>
                         </tbody>
                     </table>
                     <br/>
